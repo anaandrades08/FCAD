@@ -1,0 +1,45 @@
+//criar servidor
+
+mkdir server
+cd server
+npm init -y
+npm install 
+
+
+//comando para criar a estrutura cliente
+mkdir my-project
+cd my-project
+npx create-react-app client
+
+
+//entrar em pasta ja existente 
+cd path/to/your/existing/folder
+
+//inciando react em pasta ja existente 
+npx create-react-app .
+
+//incia
+npm start
+
+
+//inciar servidor 
+cd server
+node server.js
+
+//inciar cliente
+cd client
+npm start
+
+
+//incie no projeto
+npm install react react-dom
+
+
+//coloque o projeto em produção
+npm run build
+
+//criar README
+touch README.md
+
+
+

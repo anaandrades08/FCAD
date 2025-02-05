@@ -1,0 +1,113 @@
+/* index.css | CSS global */
+
+/* Variáveis utilizadas em outros CSS */
+:root {
+  --primary-color: #1a2b3c; /* Azul mais escuro (aumenta contraste) */
+  --secondary-color: #0056b3; /* Azul mais intenso */
+  --background-light: #ffffff; /* Branco puro */
+  --background-medium: #e9ecef; /* Cinza médio (para fundos secundários) */
+  --background-grey: #f8f9fa; /* Novo cinza claro para fundo geral */
+  --background-erro: #ffe6e6; /*fundo de erro*/
+  --text-dark: #212529; /* Preto suave (contraste melhorado) */
+  --text-light: #ffffff; /* Branco */
+  --text-error: #dc3545; /* cor do texto de erro*/
+  --text-cinza: #666; /*texto cinza*/
+  --primary-color-rgb: 28, 46, 60; /* RGB equivalente ao --primary-color */
+  --text-light-rgb: 255, 255, 255; /* RGB do branco */
+  --hover-transition: all 0.3s ease;
+  /*tamanho letra*/
+  --font-size-small: 0.875rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.125rem;
+  --font-size-xlarge: 1.25rem;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-grey);
+  color: var(--text-dark);
+}
+
+/* Estilos Globais */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*Erros e mensagens de forms*/
+
+/*Erros e mensagens de forms*/
+
+input:required {
+  border-color: #dc3545 !important;
+}
+input:invalid {
+  border-color: #dc3545 !important;
+}
+
+.input-error {
+  border-color: #dc3545 !important;
+}
+
+.errors-text {
+  color: var(--text-error);
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: var(--background-erro);
+}
+
+.success-text {
+  color: var(--secondary-color);
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: var(--background-medium);
+}
+
+.errors-text,
+.success-text {
+  font-size: var(--font-size-small); /* Tamanho padrão da fonte */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  body {
+    max-width: 100%;
+  }
+  .errors-text,
+  .success-text {
+    font-size: var(--font-size-small); /* Fonte menor para telas pequenas */
+    padding: 0.25rem;
+  }
+}
+@media (min-width: 1281px) {
+  body {
+    max-width: 100%;
+  }
+  .errors-text,
+  .success-text {
+    font-size: var(--font-size-medium); /* Fonte maior telas maiores*/
+    padding: 0.5rem;
+  }
+}

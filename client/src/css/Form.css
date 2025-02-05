@@ -1,0 +1,269 @@
+/* Cadastro.css */
+.cadastro-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--background-light);
+  box-shadow: var(--box-shadow);
+  border-radius: 12px;
+}
+
+.cadastro-container h2 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.cadastro-form {
+  background-color: var(--text-light);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cadastro-container fieldset {
+  border: 1px solid var(--primary-color);
+  background-color: rgba(
+    var(--primary-color-rgb),
+    0.1
+  ); /* Cor mais clara para o fieldset */
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cadastro-container legend {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  padding: 0 10px;
+  background-color: var(--background-light); /* Fundo para o legend */
+  border-radius: 6px;
+}
+
+.cadastro-container label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: var(--text-dark);
+  gap: 0.5rem;
+}
+
+.cadastro-container input,
+.cadastro-container select,
+.cadastro-container textarea {
+  width: calc(100% - 1.5rem); /* Ajuste para não ultrapassar a margem */
+  padding: 0.75rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+  transition: var(--hover-transition);
+  margin: 0; /* Remove margens padrão */
+}
+
+.cadastro-container input:focus,
+.cadastro-container select:focus,
+.cadastro-container textarea:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--secondary-color-rgb), 0.2);
+}
+
+.cadastro-container input:disabled {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  cursor: not-allowed;
+}
+
+.cadastro-container select {
+  appearance: none;
+  background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E")
+    no-repeat right 0.75rem center/12px 12px;
+}
+
+/* Estilos para Checkboxes */
+.cadastro-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos específicos para o fieldset de interesses */
+fieldset[name="form_interesses"] .checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+/* Botão do CEP */
+.fieldset-dados-contato button {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--hover-transition);
+}
+
+.fieldset-dados-contato button:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Botões do formulário */
+.button-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.button-container button {
+  padding: 0.75rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--hover-transition);
+}
+
+.button-container button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.button-container button[type="button"] {
+  background-color: var(--background-light);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.button-container button[type="button"]:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+/* Acessibilidade */
+.cadastro-container input:required,
+.cadastro-container select:required,
+.cadastro-container textarea:required {
+  border-color: var(--background-erro);
+}
+
+.cadastro-container input:invalid,
+.cadastro-container select:invalid,
+.cadastro-container textarea:invalid {
+  border-color: var(--background-erro);
+}
+
+.cadastro-container input:focus,
+.cadastro-container select:focus,
+.cadastro-container textarea:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--secondary-color-rgb), 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .cadastro-container {
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 100%;
+  }
+
+  .cadastro-form {
+    padding: 1rem;
+  }
+
+  .cadastro-container fieldset {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .cadastro-container legend {
+    font-size: 1.1rem;
+  }
+
+  .cadastro-container input,
+  .cadastro-container select,
+  .cadastro-container textarea {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    width: calc(100% - 1rem); /* Ajuste para telas menores */
+  }
+
+  .cadastro-container label {
+    gap: 0.25rem;
+  }
+
+  .checkbox-group {
+    gap: 8px;
+  }
+
+  fieldset[name="form_interesses"] .checkbox-group {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .button-container button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .fieldset-dados-contato button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cadastro-container h2 {
+    font-size: 1.75rem;
+  }
+
+  .cadastro-container legend {
+    font-size: 1rem;
+  }
+
+  .cadastro-container input,
+  .cadastro-container select,
+  .cadastro-container textarea {
+    font-size: 0.85rem;
+    width: calc(100% - 0.5rem); /* Ajuste para telas muito pequenas */
+  }
+
+  .checkbox-group {
+    gap: 6px;
+  }
+
+  fieldset[name="form_interesses"] .checkbox-group {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}

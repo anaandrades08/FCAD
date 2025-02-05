@@ -1,0 +1,58 @@
+.resultado-container {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 900px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.resultado-container h2 {
+  text-align: center;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.dados-cadastro {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.dados-cadastro h3 {
+  text-align: left;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 0.5rem;
+}
+
+.dados-cadastro p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.dados-cadastro ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dados-cadastro ul li {
+  background-color: #e9ecef;
+  padding: 0.5rem;
+  margin: 0.25rem 0;
+  border-radius: 4px;
+  color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .resultado-container {
+    padding: 1.5rem;
+    margin: 1rem;
+    max-width: 100%;
+  }
+}

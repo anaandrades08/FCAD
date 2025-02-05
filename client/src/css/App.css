@@ -1,0 +1,63 @@
+/* App.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  bbackground-color: var(--background-grey); /* Combina com o body */
+}
+
+.main-container {
+  flex: 1;
+  padding: 2rem;
+  background-color: var(--background-light); /* Branco puro */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra mais intensa */
+  border-radius: 12px;
+  margin: 2rem auto;
+  max-width: 1200px;
+  width: 100%; /* Garante que o container não ultrapasse 1200px */
+}
+
+/*Telas pequenas*/
+
+@media (max-width: 768px) {
+  .main-container {
+    max-width: 95%;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-container {
+    padding: 0.75rem;
+    margin: 0.5rem;
+    border-radius: 6px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+  }
+}
+
+/* Laptops */
+@media (max-width: 1280px) {
+  .main-container {
+    padding: 1.75rem;
+    margin: 1.75rem auto;
+    border-radius: 11px;
+  }
+}
+
+/* Monitores grandes */
+@media (min-width: 1281px) {
+  .main-container {
+    padding: 2.25rem;
+    margin: 2.25rem auto;
+    border-radius: 14px;
+  }

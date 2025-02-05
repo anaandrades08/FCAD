@@ -1,0 +1,169 @@
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  box-shadow: var(--box-shadow);
+  position: relative;
+  z-index: 1000;
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse os limites */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  font-size: 2.5rem; /* Tamanho maior */
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-light); /* Cor do texto */
+  transition: var(--hover-transition);
+  transform: scale(1); /* Estado inicial */
+}
+
+/* Estilo do menu de links */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none; /* Remover marcadores de lista */
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: var(--hover-transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--secondary-color);
+  background: rgba(var(--text-light-rgb), 0.05);
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 1rem;
+    position: sticky;
+    top: 0;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo */
+    gap: 1rem;
+  }
+
+  .header h1 {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .nav-menu {
+    flex-direction: row; /* Altera a direção para linha */
+    text-align: center;
+    gap: 0.75rem; /* Ajusta o espaço entre os links */
+  }
+
+  .nav-link {
+    justify-content: center;
+    border-radius: 8px;
+  }
+}
+
+/*Tablet*/
+@media (max-width: 1024px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 2rem; /* Reduz o tamanho do texto */
+  }
+
+  .nav-menu {
+    gap: 1.5rem; /* Ajusta o espaço entre os links */
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.8rem; /* Ajusta o padding */
+  }
+}
+/*Laptop*/
+@media (max-width: 1280px) {
+  .header {
+    padding: 1.2rem 1.8rem;
+  }
+
+  .header h1 {
+    font-size: 2.2rem; /* Ajusta o tamanho do texto */
+  }
+
+  .nav-menu {
+    gap: 1.8rem; /* Ajusta o espaço entre os links */
+  }
+
+  .nav-link {
+    padding: 0.45rem 0.9rem; /* Ajusta o padding */
+  }
+}
+/*Monitores grandes*/
+@media (min-width: 1281px) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .header h1 {
+    font-size: 2.5rem; /* Tamanho original do texto */
+  }
+
+  .nav-menu {
+    gap: 2rem; /* Espaço original entre os links */
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem; /* Padding original */
+  }
+}
