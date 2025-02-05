@@ -1,8 +1,15 @@
 {
-  "short_name": "FormReact",
-  "name": "React Formulário",
+  "short_name": "FCAD",
+  "name": "Sistema FCAD",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
   "start_url": "/",
-  "background_color": "#ffffff",
   "display": "standalone",
-  "theme_color": "#6F42C1"
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }

@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
-//import { sendForm } from "@emailjs/browser"; // Importe o EmailJS
+import { sendForm } from "@emailjs/browser"; // Importe o EmailJS
 import "../css/Contact.css";
+
+const seu_template_id = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const seu_public_key= process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+const seu_service_id = process.env.REACT_APP_EMAILJS_SERVICE_ID;
 
 const Contact = () => {
   // Estado para os dados do formulário
@@ -86,12 +90,12 @@ const Contact = () => {
 
         // Envia o e-mail usando EmailJS
         //deixar desativado no teste
-        //  await sendForm(
-        //    "seu_service_id", // ID do Serviço (EmailJS > Services)
-        //   "seu_template_id", // ID do Template (EmailJS > Email Templates)
-        //    e.target, // Elemento do formulário
-        //    "seu_user_id" // User ID (EmailJS > Account > API Keys)
-        //  );
+         await sendForm(
+           seu_service_id, // ID do Serviço (EmailJS > Services)
+           seu_template_id, // ID do Template (EmailJS > Email Templates)
+           e.target, // Elemento do formulário
+           seu_public_key // User ID (EmailJS > Account > API Keys)
+          );
 
         // Limpa o formulário e exibe mensagem de sucesso
         setFormData({ name: "", email: "", message: "" });

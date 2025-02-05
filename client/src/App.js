@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { FormProvider } from "./context/FormContext"; // Importe o FormProvider
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Form from "./pages/Form";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import FormResult from "./components/FormResult"; // Importe o CadastroResultado
+import { FormProvider } from "./context/FormContext.js"; // Importe o FormProvider
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
+import Home from "./pages/Home.js";
+import Form from "./pages/Form.js";
+import About from "./pages/About.js";
+import Contact from "./pages/Contact.js";
+import FormResult from "./components/FormResult.js"; // Importe o CadastroResultado
 import "./css/App.css";
 
 const App = () => {

@@ -4,7 +4,7 @@ import "../css/Footer.css";
 const Footer = () => {
   return (
     <footer className="footer" role="contentinfo" aria-label="Rodapé do site">
-      <div class="footer-content">
+      <div className="footer-content">
         <p>© 2025 Sistema FCAD. Todos os direitos reservados.</p>
         <nav>
           <a href="/linkedin">Linkedin</a>

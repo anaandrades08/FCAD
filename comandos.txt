@@ -1,45 +1,78 @@
-//criar servidor
+#criar servidor e cliente em um projeto
 
+#comando para criar a estrutura cliente (front-end):
+mkdir my-project
+cd my-project
+npx create-react-app client
+
+#comando criar a estrutura do servidor (back-end):
+cd my-project
 mkdir server
 cd server
 npm init -y
 npm install 
 
 
-//comando para criar a estrutura cliente
-mkdir my-project
-cd my-project
-npx create-react-app client
-
-
-//entrar em pasta ja existente 
+#entrar em pasta ja existente:
 cd path/to/your/existing/folder
+#ou vc pode ir dando cd e nomedapasta, até que entre no caminho que deseja.
 
-//inciando react em pasta ja existente 
+#inciando react em pasta ja existente 
 npx create-react-app .
 
-//incia
+#incia
 npm start
 
 
-//inciar servidor 
+#inciar servidor 
 cd server
 node server.js
 
-//inciar cliente
+#inciar cliente
 cd client
 npm start
 
-
-//incie no projeto
+#Instalar Reac-Dom (React dependencies)
+cd path/to/my-project/client
 npm install react react-dom
 
+#Instalar node e dependencias no servidor
+cd path/to/my-project/server
+npm install express
 
-//coloque o projeto em produção
+
+#coloque o projeto em produção
 npm run build
 
-//criar README
+#criar README
 touch README.md
+
+#Installing in the Root Directory
+
+
+##para remover o node caso esteja em pasta errada ou simplesmente delete a pasta node_modules
+cd path/to/your/project
+rmdir /s /q node_modules
+rm -rf node_modules
+
+
+##Atualizar Dependências na Subpasta (Client ou Server):
+cd path/to/your/project/client
+npm install
+
+cd path/to/your/project/server
+npm install
+
+#EmailJS
+cd path/to/your/project/client
+npm install emailjs-com
+npm install emailjs-com --legacy-peer-deps
+npm install emailjs-com --force
+
+
+#para conflitos com emailjs
+npm uninstall typescript
+npm install typescript@4.9.5
 
 
 

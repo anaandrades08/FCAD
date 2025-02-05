@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { FormContext } from "../context/FormContext";
+import { FormContext } from "../context/FormContext.js";
 import { useNavigate } from "react-router-dom";
 import "../css/Form.css";
 
